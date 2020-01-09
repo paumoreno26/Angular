@@ -1,0 +1,151 @@
+<div class="row col-3 p-3 border" style="display: inline-block;">
+    <div class="col-12 stilo">
+        <a style="font-weight:bold">Acciones</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Inicio</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Estatus</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Cuentas Bancarias</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%; background-color:red;">Cartas de Patrocinio</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Certificado deuda</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Interacciones</a>
+    </div>
+    <div class="col-12 stilo">
+        <a style="font-weight:bold">Mi información</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Actualización de datos</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Proyecto apoyado</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Academica</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Permanencia</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Laboral</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Codeudores</a>
+    </div>
+    <div class="col-12">
+        <a style="padding-left:10%;">Documentos</a>
+    </div>
+</div>
+<div class="row col-9 ml-4 p-3 border" style="display: inline-block;">
+    <div class="col-4">
+        <h4>Cartas de patrocinio</h4>
+    </div>
+    <div class="col-12">
+        <a> Aca podra generar sus cartas y certificador para cumplir con los tramites asociados a su proyecto.
+            Para generar el documento seleccione el idioma, elija el tipo de documento y finalice pulsando el link
+            generar documento.
+        </a>
+    </div>
+    <br>
+    <div class="col-12">
+        <a style="color: red;">A quien va dirigida</a>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="radio" (change)="this.cambio1()">
+        <label class="form-check-label" for="exampleCheck1">A quien pueda interesar</label>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="radio" (change)="this.cambio()">
+        <label class="form-check-label" for="exampleCheck1">A esta persona...</label>
+    </div>
+    <div class="col-12" *ngIf="this.bandera">
+        <a>Titulo</a>
+    </div>
+    <div class="radio col-6" *ngIf="this.bandera">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="radio">
+        <label class="form-check-label" for="exampleCheck1" style="padding-left:2px;">Señor</label>
+    </div>
+    <div class="radio col-6" *ngIf="this.bandera">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="radio">
+        <label class="form-check-label" for="exampleCheck1" style="padding-left:2px;">Señora</label>
+    </div>
+    <div class="radio col-6" *ngIf="this.bandera">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="radio">
+        <label class="form-check-label" for="exampleCheck1" style="padding-left:2px;">Señores</label>
+    </div>
+
+    <div class="col-3 cajonsote" *ngIf="this.bandera">
+        <label>Nombres</label>
+        <input class="caja">
+        <label>Apellidos</label>
+        <input class="caja">
+        <label>Cargo</label>
+        <input class="caja">
+    </div>
+    <div class="col-12" *ngIf="this.bandera">
+        <a style="color: red;">A donde va dirigida</a>
+    </div>
+    <div class="col-3" *ngIf="this.bandera">
+        <label>Organización</label>
+        <input class="caja">
+        <label>Dirección</label>
+        <input class="caja">
+        <label>Detalles(Apt,Bloq,Ofi,etc)</label>
+        <input class="caja">
+        <label>Ciudad</label>
+        <input class="caja">
+        <label>Pais</label>
+        <input class="caja">
+    </div>
+    <div class="col-12">
+        <a style="color: red;">¿En que idioma?</a>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="optradio" (change)="this.language('es')">
+        <label class="form-check-label" for="exampleCheck1">Español</label>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="optradio" (change)="this.language('en')">
+        <label class="form-check-label" for="exampleCheck1">Inglés</label>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="optradio" (change)="this.language('fr')">
+        <label class="form-check-label" for="exampleCheck1">Francés</label>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="optradio" (change)="this.language('it')">
+        <label class="form-check-label" for="exampleCheck1">Italiano</label>
+    </div>
+    <div class="radio col-12 form-check">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="optradio" (change)="this.language('al')">
+        <label class="form-check-label" for="exampleCheck1">Alemán</label>
+    </div>
+    <div class="col-12">
+        <a style="color: red;">¿Cual carta?</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of this.lang">
+            <tr>
+                <td>{{item}}</td>
+                <td style="color:cyan;">ver</td>
+                <td style="color:cyan;">Generar RTF</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

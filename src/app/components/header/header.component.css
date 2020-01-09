@@ -1,0 +1,13 @@
+.estilo{
+    color: red !important;
+    
+}
+
+.estilo1{
+    color: black !important;
+    
+}
+input{
+    border-radius: 5px;
+    max-height: 28px;
+}
